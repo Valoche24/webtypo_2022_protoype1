@@ -1,0 +1,149 @@
+html{
+    background-color: #f7f2e6;
+}
+
+header {
+    padding: 5px 5% 0 5%;
+}
+
+.text-wrapper {
+    padding: 0 5% 0 5%;
+
+}
+
+.text-wrapper p:nth-child(even) {
+    align-self: end;
+}
+
+section {
+    position: sticky;
+}
+
+h3 {
+    position: relative;
+    top: -30px;
+    margin-bottom: 2vw;
+}
+
+footer {
+    border-top: 1px solid rgb(0, 0, 0);
+    height: auto;
+    padding: .5vw;
+    margin-top: 50px;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! GRID QUOTE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* https://grid.layoutit.com */
+
+.grid-quote {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "lettr-1 quote-1 quote-1 quote-1 quote-1 quote-1"
+    "lettr-2 quote-2 quote-2 quote-2 quote-2 quote-2"
+    "lettr-3 quote-3 quote-3 quote-3 quote-3 quote-3"; 
+    padding: 0 5% 0 5%;
+}
+
+.grid-quote * {
+    margin: 10px 2px 5px 0;
+}
+
+.lettr-1 { grid-area: lettr-1; }
+.lettr-2 { grid-area: lettr-2; }
+.lettr-3 { grid-area: lettr-3; }
+.quote-1 { grid-area: quote-1; }
+.quote-2 { grid-area: quote-2; }
+.quote-3 { grid-area: quote-3; }
+
+
+#scrollPercentLabel {
+    z-index: -100;
+
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* IPAD PORTRAIT*/
+@media only screen and (min-width: 641px) and (max-width: 1280px) {
+
+    header {
+        padding: 30px 10vw 0 10vw;
+    }
+    
+    .text-wrapper {
+        padding: 0 20vw 0 20vw;
+    
+    }
+    .grid-quote {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "lettr-1 quote-1 quote-1 quote-1 quote-1 quote-1"
+        "lettr-2 quote-2 quote-2 quote-2 quote-2 quote-2"
+        "lettr-3 quote-3 quote-3 quote-3 quote-3 quote-3"; 
+    }
+    .lettr-1 { grid-area: lettr-1; }
+    .lettr-2 { grid-area: lettr-2; }
+    .lettr-3 { grid-area: lettr-3; }
+    .quote-1 { grid-area: quote-1; }
+    .quote-2 { grid-area: quote-2; }
+    .quote-3 { grid-area: quote-3; }
+    
+    .grid-quote * {
+        margin: 0 5px 0 0;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1280px) {
+    
+    header {
+        padding: 30px 10vw 0 10vw;
+    }
+
+    .text-wrapper {
+        padding: 0 25vw 100px 28vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-wrapper p {
+        max-width: 85%;
+    }
+    
+    .text-wrapper p:nth-child(even) {
+        align-self: end;
+    }
+    
+    .grid-quote {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: auto auto auto; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "lettr-1 quote-1 quote-1 quote-1 . ."
+          ". lettr-2 quote-2 quote-2 quote-2 ."
+          ". . lettr-3 quote-3 quote-3 quote-3"; 
+      }
+      .lettr-1 { grid-area: lettr-1; }
+      .quote-1 { grid-area: quote-1; }
+      .lettr-2 { grid-area: lettr-2; }
+      .quote-2 { grid-area: quote-2; }
+      .lettr-3 { grid-area: lettr-3; }
+      .quote-3 { grid-area: quote-3; }
+    
+      .grid-quote * {
+        margin: 0 5px 0 0;
+    }
+
+
+}
+
