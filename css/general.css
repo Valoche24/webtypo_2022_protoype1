@@ -45,6 +45,10 @@ footer {
     "quote-3 quote-3 quote-3"; 
 }
 
+.grid-quote > * {
+    margin: 0 0 1rem 0;
+}
+
 
 .quote-1 { grid-area: quote-1; }
 .quote-2 { grid-area: quote-2; }
@@ -127,6 +131,10 @@ footer {
     .quote-1 { grid-area: quote-1; }
     .quote-2 { grid-area: quote-2; }
     .quote-3 { grid-area: quote-3; }
+
+    .grid-quote > * {
+        margin: 0 0 0 0;
+    }
 
 }
 
