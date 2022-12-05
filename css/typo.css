@@ -7,7 +7,7 @@
     font-family: 'BBbook';
     src: url('fonts/BoogyBrut-Book.otf') format('opentype');
     font-weight: medium;
-    font-stretch: normal;
+    font-stretch:normal;
 }
 
 @font-face {
@@ -81,7 +81,7 @@ h1 {
     font-size: var(--sp-4xl);
     text-align: center;
     line-height: 80%;
-    text-indent: -40%;
+    text-indent: -20%;
 }
 
 h2 {
@@ -111,17 +111,19 @@ em{
     font-family: 'BBbookItalic', monospace;
     font-size: var(--sp-lg);
     line-height: 87%;
+    initial-letter: 5;
 
 }
 
-.lettrine {
+.quote-1::first-letter, .quote-2::first-letter, .quote-3::first-letter {
     font-family: 'BBposterWhiteWild', fantasy;
+    /* -webkit-initial-letter: 5; */
+    /* initial-letter: 5; */
     font-size: var(--sp-5xl);
     color: black;
-    text-align: right;
-    margin: 0;
-    line-height: 80%;
-    padding-right: 10px;
+    border: 1px solid red;
+    display: block;
+    float: left;
 }
 
 #scrollPercentLabel {
@@ -147,12 +149,8 @@ footer {
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
 
-    p {
+    p{
         margin: 0rem;
-    }
-
-    .text-wrapper p {
-        text-indent: 60px;
     }
 
     h2:nth-of-type(n) + p {
@@ -166,5 +164,10 @@ footer {
 
     p {
         margin: 0rem;
+        text-align: justify;
+    }
+
+    .text-wrapper p:nth-child(even) {
+        align-self: flex-end;
     }
 }

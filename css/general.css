@@ -11,9 +11,6 @@ header {
 
 }
 
-.text-wrapper p:nth-child(even) {
-    align-self: end;
-}
 
 section {
     position: sticky;
@@ -28,7 +25,7 @@ h3 {
 footer {
     border-top: 1px solid rgb(0, 0, 0);
     height: auto;
-    padding: .5vw;
+    padding: 5vw;
     margin-top: 50px;
 }
 
@@ -39,23 +36,19 @@ footer {
 
 .grid-quote {
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-    "lettr-1 quote-1 quote-1 quote-1 quote-1 quote-1"
-    "lettr-2 quote-2 quote-2 quote-2 quote-2 quote-2"
-    "lettr-3 quote-3 quote-3 quote-3 quote-3 quote-3"; 
-    padding: 0 5% 0 5%;
+    "quote-1 quote-1 quote-1"
+    "quote-2 quote-2 quote-2"
+    "quote-3 quote-3 quote-3"; 
 }
 
-.grid-quote * {
-    margin: 10px 2px 5px 0;
-}
 
-.lettr-1 { grid-area: lettr-1; }
-.lettr-2 { grid-area: lettr-2; }
-.lettr-3 { grid-area: lettr-3; }
+
+
+
 .quote-1 { grid-area: quote-1; }
 .quote-2 { grid-area: quote-2; }
 .quote-3 { grid-area: quote-3; }
@@ -77,29 +70,32 @@ footer {
     }
     
     .text-wrapper {
-        padding: 0 20vw 0 20vw;
+        padding: 0 18vw 0 18vw;
     
     }
+
+    .text-wrapper p {
+        margin-bottom: 1rem;
+    }
+
+
+
     .grid-quote {
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
         grid-template-rows: 1fr 1fr 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
-        "lettr-1 quote-1 quote-1 quote-1 quote-1 quote-1"
-        "lettr-2 quote-2 quote-2 quote-2 quote-2 quote-2"
-        "lettr-3 quote-3 quote-3 quote-3 quote-3 quote-3"; 
+          "quote-1 quote-1 quote-1 . ."
+          ". quote-2 quote-2 quote-2 ."
+          ". . quote-3 quote-3 quote-3";
     }
-    .lettr-1 { grid-area: lettr-1; }
-    .lettr-2 { grid-area: lettr-2; }
-    .lettr-3 { grid-area: lettr-3; }
+
     .quote-1 { grid-area: quote-1; }
     .quote-2 { grid-area: quote-2; }
     .quote-3 { grid-area: quote-3; }
     
-    .grid-quote * {
-        margin: 0 5px 0 0;
-    }
+
 }
 
 /* DESKTOP */
@@ -110,40 +106,30 @@ footer {
     }
 
     .text-wrapper {
-        padding: 0 25vw 100px 28vw;
+        padding: 0 15vw 100px 15vw;
         display: flex;
         flex-direction: column;
     }
 
     .text-wrapper p {
-        max-width: 85%;
+        max-width: 65%;
     }
     
-    .text-wrapper p:nth-child(even) {
-        align-self: end;
-    }
     
     .grid-quote {
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: auto auto auto; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
-          "lettr-1 quote-1 quote-1 quote-1 . ."
-          ". lettr-2 quote-2 quote-2 quote-2 ."
-          ". . lettr-3 quote-3 quote-3 quote-3"; 
-      }
-      .lettr-1 { grid-area: lettr-1; }
-      .quote-1 { grid-area: quote-1; }
-      .lettr-2 { grid-area: lettr-2; }
-      .quote-2 { grid-area: quote-2; }
-      .lettr-3 { grid-area: lettr-3; }
-      .quote-3 { grid-area: quote-3; }
-    
-      .grid-quote * {
-        margin: 0 5px 0 0;
+          "quote-1 quote-1 quote-1 . ."
+          ". quote-2 quote-2 quote-2 ."
+          ". . quote-3 quote-3 quote-3";
     }
 
+    .quote-1 { grid-area: quote-1; }
+    .quote-2 { grid-area: quote-2; }
+    .quote-3 { grid-area: quote-3; }
 
 }
 
