@@ -11,6 +11,10 @@ header {
 
 }
 
+img {
+    width: 100%;
+    mix-blend-mode: multiply;
+}
 
 section {
     position: sticky;
@@ -27,6 +31,11 @@ footer {
     height: auto;
     padding: 5vw;
     margin-top: 50px;
+}
+
+p::selection{
+    color: #f7f2e6;
+    background-color: rgb(71, 54, 10);
 }
 
 
@@ -76,7 +85,7 @@ footer {
     }
 
     .text-wrapper p {
-        margin-bottom: 1rem;
+        margin: .5rem 0 .5rem 0;
     }
 
 
@@ -112,7 +121,7 @@ footer {
         flex-direction: column;
     }
 
-    .text-wrapper p {
+    .text-wrapper p, .text-wrapper img {
         max-width: 65%;
     }
     
@@ -134,6 +143,10 @@ footer {
 
     .grid-quote > * {
         margin: 0 0 0 0;
+    }
+
+    img {
+        margin: 0 0 .5rem 0;
     }
 
 }

@@ -101,7 +101,7 @@ h3 {
 
 p {
     color: rgb(71, 54, 10);
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
 }
 
 em{
@@ -168,9 +168,11 @@ footer {
         text-align: justify;
     }
 
-    .text-wrapper p:nth-child(even) {
+    .text-wrapper *:nth-child(even) {
         align-self: flex-end;
     }
+
+    
 
 
 }
