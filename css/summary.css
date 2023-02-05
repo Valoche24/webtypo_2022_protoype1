@@ -1,0 +1,16 @@
+@import url(typo.css);
+
+
+h1 {
+    font-size: var(--font-size-2xl);
+    text-transform: uppercase;
+}
+
+ul {
+    font-size: var(--font-size-md);
+    list-style-type: decimal;
+}
+
+ol {
+    margin-top: .5em;
+}

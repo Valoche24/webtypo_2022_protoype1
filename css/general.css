@@ -1,73 +1,14 @@
-html{
-    background-color: #f7f2e6;
+root: {
+    --main-bg-color: #f7f2e6;
+    --main-color-text: #251A10;
 }
 
-header {
-    padding: 5px 5% 0 5%;
-}
-
-.text-wrapper {
-    padding: 0 5% 0 5%;
-
-}
-
-img {
-    width: 100%;
-    mix-blend-mode: multiply;
-}
-
-section {
-    position: sticky;
-}
-
-h3 {
-    position: relative;
-    top: -30px;
-    margin-bottom: 2vw;
-}
-
-footer {
-    border-top: 1px solid rgb(0, 0, 0);
-    height: auto;
-    padding: 5vw;
-    margin-top: 50px;
-}
-
-p::selection{
-    color: #f7f2e6;
-    background-color: rgb(71, 54, 10);
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-color-text);
 }
 
 
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!! GRID QUOTE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* https://grid.layoutit.com */
-
-.grid-quote {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "quote-1 quote-1 quote-1"
-    "quote-2 quote-2 quote-2"
-    "quote-3 quote-3 quote-3"; 
-}
-
-.grid-quote > * {
-    margin: 0 0 1rem 0;
-}
-
-
-.quote-1 { grid-area: quote-1; }
-.quote-2 { grid-area: quote-2; }
-.quote-3 { grid-area: quote-3; }
-
-
-#scrollPercentLabel {
-    z-index: -100;
-
-}
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -75,79 +16,9 @@ p::selection{
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
 
-    header {
-        padding: 30px 10vw 0 10vw;
-    }
-    
-    .text-wrapper {
-        padding: 0 18vw 0 18vw;
-    
-    }
-
-    .text-wrapper p {
-        margin: .5rem 0 .5rem 0;
-    }
-
-
-
-    .grid-quote {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "quote-1 quote-1 quote-1 . ."
-          ". quote-2 quote-2 quote-2 ."
-          ". . quote-3 quote-3 quote-3";
-    }
-
-    .quote-1 { grid-area: quote-1; }
-    .quote-2 { grid-area: quote-2; }
-    .quote-3 { grid-area: quote-3; }
-    
-
 }
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
-    
-    header {
-        padding: 30px 10vw 0 10vw;
-    }
-
-    .text-wrapper {
-        padding: 0 15vw 100px 15vw;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .text-wrapper p, .text-wrapper img {
-        max-width: 65%;
-    }
-    
-    
-    .grid-quote {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "quote-1 quote-1 quote-1 . ."
-          ". quote-2 quote-2 quote-2 ."
-          ". . quote-3 quote-3 quote-3";
-    }
-
-    .quote-1 { grid-area: quote-1; }
-    .quote-2 { grid-area: quote-2; }
-    .quote-3 { grid-area: quote-3; }
-
-    .grid-quote > * {
-        margin: 0 0 0 0;
-    }
-
-    img {
-        margin: 0 0 .5rem 0;
-    }
 
 }
-

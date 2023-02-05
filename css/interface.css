@@ -1,0 +1,30 @@
+/* BUTTON */
+
+button {
+    
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100svw;
+    padding: 1em;
+    border-color: var(--main-text-color);
+    border-top: solid;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+footer ul {
+    margin: 1em;
+    list-style-type: none;
+}
+
+
+footer a {
+    border-style: solid;
+}
+

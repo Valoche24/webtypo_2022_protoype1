@@ -1,0 +1,39 @@
+
+@import url(typo.css);
+
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+
+}
+
+main {
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+
+
+
+
+
+
+/* TYPOGRAPHIE */
+
+
+h1 {
+    font-family: "BBposterBlack", Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-3xl);
+    line-height: 80%;
+}
+
+.author {
+    font-size: var(--font-size-xl);
+
+}
+
+
