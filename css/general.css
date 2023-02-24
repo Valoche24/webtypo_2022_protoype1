@@ -1,13 +1,59 @@
-root: {
-    --main-bg-color: #f7f2e6;
-    --main-color-text: #251A10;
+@import url(typo.css);
+
+body{
+    display: flex;
 }
 
-body {
-    background-color: var(--main-bg-color);
-    color: var(--main-color-text);
+h1, #titleScroll {
+    font-family: "BBposterWhiteItalic", Times, Helvetica, sans-serif;
+    font-size: var(--font-size-6xl);
+    line-height: .75;
 }
 
+#titleScroll{
+    writing-mode: vertical-rl;
+    font-size: var(--font-size-xl);
+    
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+
+
+main {
+    padding: 5%;
+
+}
+
+p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#arrow {
+    display: flex;
+    align-items: center;
+}
+
+#nightButton {
+    border: none;
+    background: none;
+    position: static;
+    font-size: var(--font-size-lg);
+
+}
+
+nav {
+    margin-left: 30%;
+
+}
 
 
 
@@ -15,10 +61,66 @@ body {
 
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
-
+    main {
+        padding: 5% 13% 0% 13%;
+    }
 }
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
 
+
+
+
+    h1 {
+        display: none;
+    }
+
+
+
+    #stickyContainer {
+        position: absolute;
+        width: 50vw;
+        justify-content: space-evenly;
+    }
+
+
+    nav {
+        flex-direction: column-reverse;
+        padding: 5% 5% 3% 5%;
+        filter: invert(1);
+        mix-blend-mode: difference;
+        z-index: 15;
+        margin-left: 0;
+
+    }
+
+    #arrow {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        z-index: 20;
+    }
+
+    #arrow :nth-child(2) {
+        order: 1;
+    }
+
+
+    h1, #titleScroll {
+        font-size: var(--font-size-4xl);
+        writing-mode: horizontal-tb;
+        text-align: center;
+    }
+
+
+    #arrow {
+        font-size: var(--font-size-xl);
+    }
+
+    main {
+        padding: 3%;
+    }
+
 }
+

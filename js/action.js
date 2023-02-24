@@ -14,15 +14,15 @@ $(document).ready(function () {
       repositionLabel();
     });
   
-    function repositionLabel() {
-      $("#scrollPercentLabel").css({
-        position: "fixed",
-        left: ($(window).width() - $("#scrollPercentLabel").outerWidth()) / 2,
-        top:
-          ($(window).height() - $("#scrollPercentLabel").outerHeight()) / 2 -
-          $("#scrollPercentLabel").height()
-      });
-    }
+    // function repositionLabel() {
+    //  $("#scrollPercentLabel").css({
+    //    position: "fixed",
+    //    left: ($(window).width() - $("#scrollPercentLabel").outerWidth()) / 2,
+    //    top:
+    //      ($(window).height() - $("#scrollPercentLabel").outerHeight()) / 2 -
+    //      $("#scrollPercentLabel").height()
+    //  });
+    // }
   
     repositionLabel();
   });
@@ -33,3 +33,18 @@ $(document).ready(function () {
 
 // MULTI TITLE STICKY BAR 
 // https://codepen.io/chrissp26/pen/AwBYPm
+
+
+function nightButton() {
+  var elementBoby = document.body;
+  var elementImg = document.images;
+  elementBoby.classList.toggle("dark-mode");
+  elementImg.classList.toggle("img-mode");
+
+  console.log("Nik ta mere JS !!!");
+
+
+}
+
+
+
