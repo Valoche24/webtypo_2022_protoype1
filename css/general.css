@@ -88,8 +88,8 @@ nav {
     nav {
         flex-direction: column-reverse;
         padding: 5% 5% 3% 5%;
-        filter: invert(1);
-        mix-blend-mode: difference;
+        /* filter: invert(1);*/
+        /* mix-blend-mode: difference; */
         z-index: 15;
         margin-left: 0;
 

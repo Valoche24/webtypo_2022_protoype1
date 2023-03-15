@@ -58,28 +58,62 @@ img{
 
 #nightButton {
     font-size: var(--font-size-2xl);
+    background-color: var(--main-color-text);
     border: none;
     background: none;
     position: fixed;
     right: 20px;
     top: 10px;
+}
+
+
+
+body.dark-theme {
+    background-color: var(--main-color-text);
+    color: var(--main-bg-color);
+    font-weight: 380;
+}
+
+body.dark-theme .illustration {
 
 }
 
 
-.dark-mode {
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
     background-color: var(--main-color-text);
     color: var(--main-bg-color);
-    font-weight: 400;
+  }
+  
+
+
+  body.light-theme {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
   }
 
 
-
-.dark-img {
-    filter: invert(1);
 }
 
 
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! DARK MODE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--main-color-text);
+        color: var(--main-bg-color);
+        font-weight: 380;
+      }
+  }
+
+*/
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -99,7 +133,7 @@ img{
     }
 
     #scrollPercentLabel {
-        font-family: "BBposterWhiteWild";
+        font-family: "BBposterWhiteItalic";
         font-size: var(--font-size-2xl);
 
     }

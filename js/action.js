@@ -31,20 +31,37 @@ $(document).ready(function () {
 
 
 
-// MULTI TITLE STICKY BAR 
-// https://codepen.io/chrissp26/pen/AwBYPm
 
+// DARK MODE
+// https://codepen.io/adhuham/pen/BaNroxd
 
-function nightButton() {
-  var elementBoby = document.body;
-  var elementImg = document.images;
-  elementBoby.classList.toggle("dark-mode");
-  elementImg.classList.toggle("img-mode");
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-  console.log("Nik ta mere JS !!!");
-
-
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+  console.log("toggle Dark Theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+  console.log("toggle Light Theme");
 }
 
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+      console.log("Matches Dark Theme");
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+      console.log("Matches Light Theme");
 
+  }
+  localStorage.setItem("theme", theme);
+});
 
