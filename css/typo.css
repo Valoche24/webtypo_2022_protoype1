@@ -58,7 +58,7 @@ img{
 
 #nightButton {
     font-size: var(--font-size-2xl);
-    background-color: var(--main-color-text);
+    color: var(--main-color-text);
     border: none;
     background: none;
     position: fixed;
@@ -78,6 +78,11 @@ body.dark-theme .illustration {
 
 }
 
+body.dark-theme #nightButton {
+    color: var(--main-bg-color);
+}
+
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -87,6 +92,9 @@ body.dark-theme .illustration {
     color: var(--main-bg-color);
   }
   
+  #nightButton {
+    color: var(--main-color-text);
+  }
 
 
   body.light-theme {
@@ -94,6 +102,9 @@ body.dark-theme .illustration {
     color: var(--main-text-color);
   }
 
+  body.dark-theme #nightButton {
+    color: var(--main-text-color);
+}
 
 }
 
