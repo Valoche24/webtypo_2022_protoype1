@@ -3,7 +3,7 @@
 :root{
 --font-size-sm: clamp(0.71rem, -0.09vw + 0.73rem, 0.67rem);
 --font-size-base: clamp(0.89rem, 0.23vw + 0.84rem, 1rem);
---font-size-md: clamp(1.11rem, 0.8vw + 0.93rem, 1.5rem);
+--font-size-md: clamp(1.11rem, 0.7vw + 0.86rem, 1.5rem);
 --font-size-lg: clamp(1.39rem, 1.76vw + 0.93rem, 2.25rem);
 --font-size-xl: clamp(1.74rem, 3.35vw + 0.99rem, 3.38rem);
 --font-size-2xl: clamp(2.17rem, 5.92vw + 0.86rem, 5.06rem);
@@ -33,11 +33,6 @@
     font-weight: 400;
 }
 
-@font-face {
-    font-family: "BBposterBlack";
-    src: url(fonts/BoogyBrut-PosterBlack.otf);
-    font-weight: 800;
-}
 
 
 body {
@@ -52,7 +47,9 @@ body {
 
 
 img{
-    mix-blend-mode: multiply;
+    z-index: 18;
+        filter: invert(0) drop-shadow(0px 0px 0px #f7f2e6);
+
 }
 
 
@@ -66,15 +63,19 @@ img{
     top: 10px;
 }
 
+#scrollPercentLabel, #porfolio{
+    font-family: "BBposterWhiteItalic";
+}
 
 
 body.dark-theme {
     background-color: var(--main-color-text);
     color: var(--main-bg-color);
-    font-weight: 380;
+    font-weight: 330;
 }
 
-body.dark-theme .illustration {
+body.dark-theme img {
+    filter: invert(1) drop-shadow(0px 0px 0px #22170C);
 
 }
 
@@ -85,46 +86,53 @@ body.dark-theme #nightButton {
 
 
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! DARK PREFERENCE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
 @media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
-  body {
+
+    body {
     background-color: var(--main-color-text);
     color: var(--main-bg-color);
+    font-weight: 330;
+
   }
   
   #nightButton {
-    color: var(--main-color-text);
+    color: var(--main-bg-color);
   }
+
+  img {
+    filter: invert(1) drop-shadow(0px 0px 0px #22170C) drop-shadow(0px 0px 5px #22170C) drop-shadow(0px 0px 10px #22170C) drop-shadow(0px 0px 15px #22170C) drop-shadow(0px 0px 20px #22170C) drop-shadow(0px 0px 25px #22170C);
+
+}
 
 
   body.light-theme {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    font-weight: 450;
+
+
   }
 
   body.dark-theme #nightButton {
     color: var(--main-text-color);
-}
+  }   
+
+
+  body.light-theme img {
+    filter: invert(0) drop-shadow(0px 0px 3px #f7f2e6) drop-shadow(0px 0px 5px #f7f2e6) drop-shadow(0px 0px 10px #f7f2e6) drop-shadow(0px 0px 15px #f7f2e6) drop-shadow(0px 0px 20px #f7f2e6) drop-shadow(0px 0px 25px #f7f2e6);
+
+
+    }
 
 }
 
 
 
 
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!! DARK MODE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-/* 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--main-color-text);
-        color: var(--main-bg-color);
-        font-weight: 380;
-      }
-  }
-
-*/
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -143,9 +151,12 @@ body.dark-theme #nightButton {
         font-weight: 800;
     }
 
-    #scrollPercentLabel {
+    #scrollPercentLabel, #porfolio {
         font-family: "BBposterWhiteItalic";
         font-size: var(--font-size-2xl);
-
     }
+
+    
+    
+
 }

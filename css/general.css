@@ -13,6 +13,7 @@ h1, #titleScroll {
 #titleScroll{
     writing-mode: vertical-rl;
     font-size: var(--font-size-xl);
+    z-index: 12;
     
 }
 
@@ -40,13 +41,17 @@ img {
 #arrow {
     display: flex;
     align-items: center;
+    z-index: 30;
+    font-size: var(--font-size-xl);
+
+
 }
 
 #nightButton {
     border: none;
     background: none;
     position: static;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
 
 }
 
@@ -54,6 +59,20 @@ nav {
     margin-left: 30%;
 
 }
+
+#porfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 80%;
+    text-align: center ;
+
+}
+
+
+
+
+
 
 
 
@@ -90,7 +109,6 @@ nav {
         padding: 5% 5% 3% 5%;
         /* filter: invert(1);*/
         /* mix-blend-mode: difference; */
-        z-index: 15;
         margin-left: 0;
 
     }
@@ -99,8 +117,9 @@ nav {
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
-        z-index: 20;
     }
+
+
 
     #arrow :nth-child(2) {
         order: 1;
@@ -121,6 +140,13 @@ nav {
     main {
         padding: 3%;
     }
+
+    #porfolio > * {
+        line-height: 80%;
+        
+    
+    }
+    
 
 }
 

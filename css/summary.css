@@ -16,8 +16,9 @@ h1 {
     line-height: .75;
     text-transform: capitalize;
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 2.5rem 0 1rem 0;
     padding: 0vw 5vw 0vw 5vw;
+    text-align: left;
 
 }
 
@@ -42,7 +43,11 @@ ol {
 
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
+    main {
 
+        height: 100%;
+    
+    }
 }
 
 /* DESKTOP */
@@ -50,12 +55,17 @@ ol {
     
 
    
-    h1 {
-        text-align: left;
+    main {
+        height: 100%;
+        margin-bottom: 3rem;
+
     }
 
     main ol {
         flex-direction: column;
+        
     }
+
+
 }
 
