@@ -1,0 +1,30 @@
+@import url(typo.css);
+
+
+
+body {
+    display: flex;
+}
+
+
+#stickyContainer {
+    background-color: aqua ;
+    min-height: 300vh;
+
+}
+
+
+h1 {
+
+    font-family: "BBposterWhiteItalic", Times, Helvetica, sans-serif;
+    font-size: 200%;
+    line-height: .8;
+    writing-mode:vertical-rl;
+    text-align: right;
+}
+
+nav {
+    background-color: brown;
+    top: 0;
+    position: sticky;
+}

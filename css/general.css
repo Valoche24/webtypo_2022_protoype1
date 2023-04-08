@@ -1,153 +1,152 @@
-html{
-    background-color: #f7f2e6;
+@import url(typo.css);
+
+body{
+    display: flex;
 }
 
-header {
-    padding: 5px 5% 0 5%;
+h1, #titleScroll {
+    font-family: "BBposterWhiteItalic", Times, Helvetica, sans-serif;
+    font-size: var(--font-size-6xl);
+    line-height: .75;
 }
 
-.text-wrapper {
-    padding: 0 5% 0 5%;
+#titleScroll{
+    writing-mode: vertical-rl;
+    font-size: var(--font-size-xl);
+    z-index: 12;
+    
+}
 
+h1 {
+    margin-bottom: 30px;
+}
+
+
+
+main {
+    padding: 5%;
+
+}
+
+p {
+    line-height: 1.4;
+    margin-bottom: 20px;
 }
 
 img {
     width: 100%;
-    mix-blend-mode: multiply;
+    margin-bottom: 20px;
 }
 
-section {
-    position: sticky;
+#arrow {
+    display: flex;
+    align-items: center;
+    z-index: 30;
+    font-size: var(--font-size-xl);
+
+
 }
 
-h3 {
-    position: relative;
-    top: -30px;
-    margin-bottom: 2vw;
+#nightButton {
+    border: none;
+    background: none;
+    position: static;
+    font-size: var(--font-size-xl);
+
 }
 
-footer {
-    border-top: 1px solid rgb(0, 0, 0);
-    height: auto;
-    padding: 5vw;
-    margin-top: 50px;
+nav {
+    margin-left: 30%;
+
 }
 
-p::selection{
-    color: #f7f2e6;
-    background-color: rgb(71, 54, 10);
-}
+#porfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 80%;
+    text-align: center ;
 
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!! GRID QUOTE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* https://grid.layoutit.com */
-
-.grid-quote {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "quote-1 quote-1 quote-1"
-    "quote-2 quote-2 quote-2"
-    "quote-3 quote-3 quote-3"; 
-}
-
-.grid-quote > * {
-    margin: 0 0 1rem 0;
 }
 
 
-.quote-1 { grid-area: quote-1; }
-.quote-2 { grid-area: quote-2; }
-.quote-3 { grid-area: quote-3; }
 
 
-#scrollPercentLabel {
-    z-index: -100;
 
-}
+
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! RESPONSIVE !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
-
-    header {
-        padding: 30px 10vw 0 10vw;
+    main {
+        padding: 5% 20% 0% 20%;
     }
-    
-    .text-wrapper {
-        padding: 0 18vw 0 18vw;
-    
-    }
-
-    .text-wrapper p {
-        margin: .5rem 0 .5rem 0;
-    }
-
-
-
-    .grid-quote {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "quote-1 quote-1 quote-1 . ."
-          ". quote-2 quote-2 quote-2 ."
-          ". . quote-3 quote-3 quote-3";
-    }
-
-    .quote-1 { grid-area: quote-1; }
-    .quote-2 { grid-area: quote-2; }
-    .quote-3 { grid-area: quote-3; }
-    
-
 }
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
+
+
+
+
+    h1 {
+        display: none;
+    }
+
+
+
+    #stickyContainer {
+        position: absolute;
+        width: 50vw;
+        justify-content: space-evenly;
+    }
+
+
+    nav {
+        flex-direction: column-reverse;
+        padding: 5% 5% 3% 5%;
+        /* filter: invert(1);*/
+        /* mix-blend-mode: difference; */
+        margin-left: 0;
+
+    }
+
+    #arrow {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+
+
+    #arrow :nth-child(2) {
+        order: 1;
+    }
+
+
+    h1, #titleScroll {
+        font-size: var(--font-size-4xl);
+        writing-mode: horizontal-tb;
+        text-align: center;
+    }
+
+
+    #arrow {
+        font-size: var(--font-size-xl);
+    }
+
+    main {
+        padding: 3%;
+    }
+
+    #porfolio > * {
+        line-height: 80%;
+        
     
-    header {
-        padding: 30px 10vw 0 10vw;
-    }
-
-    .text-wrapper {
-        padding: 0 15vw 100px 15vw;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .text-wrapper p, .text-wrapper img {
-        max-width: 65%;
     }
     
-    
-    .grid-quote {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "quote-1 quote-1 quote-1 . ."
-          ". quote-2 quote-2 quote-2 ."
-          ". . quote-3 quote-3 quote-3";
-    }
-
-    .quote-1 { grid-area: quote-1; }
-    .quote-2 { grid-area: quote-2; }
-    .quote-3 { grid-area: quote-3; }
-
-    .grid-quote > * {
-        margin: 0 0 0 0;
-    }
-
-    img {
-        margin: 0 0 .5rem 0;
-    }
 
 }
 
