@@ -1,3 +1,10 @@
+
+
+
+
+ // SCROLL BAR
+
+
 $(document).ready(function () {
     $(window).scroll(function (e) {
       var scrollTop = $(window).scrollTop();
@@ -26,8 +33,6 @@ $(document).ready(function () {
   
     repositionLabel();
   });
-
-
 
 
 
@@ -64,4 +69,31 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
 });
+
+
+
+
+
+// RANDOM IAMGE HOME PAGE
+
+
+
+
+
+
+ // HEIGHT CONTENT
+
+//recup la valeur entière du la page
+var heightContentPage = document.body.scrollHeight;
+
+console.log(heightContentPage, "px");
+
+heightContentPage = heightContentPage * 1.2;
+
+console.log(heightContentPage, "px");
+
+document.getElementById("stickyContainer").style.height = heightContentPage + "px"; 
+// JE SAIS PAS POURQUOI LA VALEUR NE MATCH PAS AVEC LE SRICKYCONTAINER
+
+
 

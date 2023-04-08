@@ -81,7 +81,7 @@ nav {
 /* IPAD PORTRAIT*/
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
     main {
-        padding: 5% 13% 0% 13%;
+        padding: 5% 20% 0% 20%;
     }
 }
 

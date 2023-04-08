@@ -48,7 +48,7 @@ body {
 
 img{
     z-index: 18;
-        filter: invert(0) drop-shadow(0px 0px 0px #f7f2e6);
+    filter: invert(0) drop-shadow(0px 0px 3px #f7f2e6) drop-shadow(0px 0px 5px #f7f2e6) drop-shadow(0px 0px 10px #f7f2e6) drop-shadow(0px 0px 15px #f7f2e6) drop-shadow(0px 0px 20px #f7f2e6) drop-shadow(0px 0px 25px #f7f2e6);
 
 }
 
@@ -75,13 +75,14 @@ body.dark-theme {
 }
 
 body.dark-theme img {
-    filter: invert(1) drop-shadow(0px 0px 0px #22170C);
+    filter: invert(1) drop-shadow(0px 0px 0px #22170C) drop-shadow(0px 0px 5px #22170C) drop-shadow(0px 0px 10px #22170C) drop-shadow(0px 0px 15px #22170C) drop-shadow(0px 0px 20px #22170C) drop-shadow(0px 0px 25px #22170C);
 
 }
 
 body.dark-theme #nightButton {
     color: var(--main-bg-color);
 }
+
 
 
 
@@ -117,9 +118,9 @@ body.dark-theme #nightButton {
 
   }
 
-  body.dark-theme #nightButton {
+  body.light-theme #nightButton {
     color: var(--main-text-color);
-  }   
+}
 
 
   body.light-theme img {
@@ -156,30 +157,11 @@ body.dark-theme #nightButton {
         font-size: var(--font-size-2xl);
     }
 
-    img {
-        filter: invert(0) drop-shadow(0px 0px 3px #f7f2e6) drop-shadow(0px 0px 5px #f7f2e6) drop-shadow(0px 0px 10px #f7f2e6) drop-shadow(0px 0px 15px #f7f2e6) drop-shadow(0px 0px 20px #f7f2e6) drop-shadow(0px 0px 25px #f7f2e6);
-
-    }
-
-    body.dark-theme img {
-        filter: invert(1) drop-shadow(0px 0px 3px #22170C) drop-shadow(0px 0px 5px #22170C) drop-shadow(0px 0px 10px #22170C) drop-shadow(0px 0px 15px #22170C) drop-shadow(0px 0px 20px #22170C) drop-shadow(0px 0px 25px #22170C) ;
-    
-    }
-    
     
     
 
 }
 
-@media only screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
-    img {
-        filter: invert(0) drop-shadow(0px 0px 3px #f7f2e6) drop-shadow(0px 0px 5px #f7f2e6) drop-shadow(0px 0px 10px #f7f2e6) drop-shadow(0px 0px 15px #f7f2e6) drop-shadow(0px 0px 20px #f7f2e6) drop-shadow(0px 0px 25px #f7f2e6);
 
-    }
 
-    body.dark-theme img {
-        filter: invert(1) drop-shadow(0px 0px 3px #22170C) drop-shadow(0px 0px 5px #22170C) drop-shadow(0px 0px 10px #22170C) drop-shadow(0px 0px 15px #22170C) drop-shadow(0px 0px 20px #22170C) drop-shadow(0px 0px 25px #22170C) ;
-    
-    }
 
-}

@@ -118,4 +118,20 @@
 
 
 
+figcaption {
+  z-index: 100;
+  font-size: var(--font-size-base);
+  text-decoration: underline;
+  margin-bottom: 1em;
+  text-decoration-thickness: 2.5px;
+}
 
+
+#arrow, #arrow > * {
+  z-index: 200;
+}
+
+
+h1 {
+  hyphens: auto;
+}
